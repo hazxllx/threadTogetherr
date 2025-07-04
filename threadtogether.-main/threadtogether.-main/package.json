@@ -13,7 +13,7 @@
     "concurrently": "^9.1.2"
   },
   "scripts": {
-    "start": "npm run build && node app.js",
-    "build": "cd client && npm install && npm run build"
+  "start": "npm run build && node api/index.js",
+  "build": "cd client && npm install && npm run build"
   }
 }
