@@ -1,0 +1,13 @@
+{
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "plugins": {
+    "mongodb": {}
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

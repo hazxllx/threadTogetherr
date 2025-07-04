@@ -1,0 +1,360 @@
+/* Global Reset */
+* {
+  box-sizing: border-box; /* Ensures consistent box model across elements */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+body {
+  background-color: #FBF5E5; /* Soft pastel background */
+  color: #212121; /* Dark gray text for good contrast */
+  font-family: 'Helvetica Neue', sans-serif; /* Clean, modern font */
+  line-height: 1.6; /* Increases readability */
+  padding: 0; /* Removes default padding */
+}
+
+a {
+  cursor: pointer; /* Pointer cursor on clickable links */
+  text-decoration: none; /* Removes underlining from links */
+  color: inherit; /* Inherits color from parent */
+}
+
+img {
+  max-width: 100%; /* Ensures images don't overflow their containers */
+  border-radius: 8px; /* Adds rounded corners to images */
+}
+
+/* Layout */
+main {
+  padding: 20px; /* Adds padding around main content */
+  max-width: 960px; /* Sets maximum width for main content */
+  margin: 0 auto; /* Centers the content */
+}
+
+header {
+  display: flex; /* Flexbox layout for header */
+  justify-content: space-between; /* Spreads out content */
+  margin-top: 20px; /* Adds margin above header */
+  margin-bottom: 50px; /* Adds margin below header */
+  align-items: center; /* Aligns items vertically */
+}
+
+header a.logo {
+  font-weight: 600; /* Makes logo text bold */
+  font-size: 2rem; /* Sets logo font size */
+  color: rgb(165, 56, 96); /* Logo color */
+  font-family: 'Poiret One', sans-serif; /* Fancy font for logo */
+}
+
+header nav {
+  display: flex; /* Flexbox layout for navigation */
+  gap: 24px; /* Adds space between navigation items */
+  align-items: center; /* Aligns nav items vertically */
+}
+
+/* Header links */
+header nav a,
+header nav span {
+  font-weight: 500; /* Regular font weight */
+  color: rgb(58, 5, 25); /* Navigation link color */
+  font-size: 1rem; /* Sets font size */
+  cursor: pointer; /* Pointer cursor on links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+header nav a:hover,
+header nav span.logout:hover {
+  color: rgb(103, 13, 47); /* Hover color for links */
+  text-decoration: underline; /* Underlines links on hover */
+}
+
+/* Login and Register Page Styles */
+form.login, form.register {
+  max-width: 400px; /* Sets max width of the form */
+  margin: 0 auto; /* Centers the form */
+  padding: 20px; /* Adds padding inside the form */
+  background-color: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: center; /* Centers the text inside the form */
+}
+
+form h1 {
+  font-size: 2rem; /* Font size for form heading */
+  color: rgb(165, 56, 96); /* Title color */
+  margin-bottom: 20px; /* Margin below the heading */
+  font-family: 'Poiret One', sans-serif; /* Fancy font for title */
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="password"] {
+  width: 100%; /* Full width of input fields */
+  padding: 12px; /* Padding inside input fields */
+  margin: 10px 0; /* Margin above and below input fields */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners for inputs */
+  font-size: 16px; /* Font size for input text */
+  transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: rgb(165, 56, 96); /* Focused border color */
+  outline: none; /* Removes default outline on focus */
+}
+
+/* Form Button */
+form button {
+  width: 100%; /* Full width button */
+  padding: 12px; /* Padding inside the button */
+  background-color: rgb(165, 56, 96); /* Deep pink color for button */
+  color: white; /* White text */
+  border: none; /* Removes border */
+  border-radius: 5px; /* Rounded corners for button */
+  font-size: 16px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+form button:hover {
+  background-color: rgb(103, 13, 47); /* Darker pink on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form.login, form.register {
+    width: 90%; /* Makes the form width smaller on mobile */
+    padding: 15px; /* Reduces padding on mobile */
+  }
+
+  form h1 {
+    font-size: 1.8rem; /* Smaller font size on mobile */
+  }
+
+  form input[type="text"], form input[type="password"], form button {
+    font-size: 14px; /* Smaller font size on mobile */
+  }
+}
+
+/* Link Styling for Register Page */
+form.register a {
+  display: block; /* Makes the link a block-level element */
+  margin-top: 10px; /* Margin above the link */
+  color: rgb(165, 56, 96); /* Link color */
+  text-decoration: none; /* Removes underline */
+}
+
+form.register a:hover {
+  text-decoration: underline; /* Underlines link on hover */
+}
+
+/* Post Styles for Homepage and Bookmarks */
+div.post, .bookmark-item {
+  display: flex; /* Flexbox layout for posts */
+  gap: 20px; /* Space between post elements */
+  padding: 20px; /* Padding inside post */
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  align-items: center; /* Vertically centers the post content */
+  width: 100%; /* Full width */
+  margin-bottom: 30px; /* Margin below each post */
+}
+
+div.post h2, .bookmark-item h2 {
+  font-size: 2rem; /* Font size for post titles */
+  color: rgb(165, 56, 96); /* Title color */
+  text-align: left; /* Aligns title to the left */
+  margin: 0; /* Removes margin */
+  flex: 1; /* Allows title to take available space */
+}
+
+div.post p.info, .bookmark-item .info {
+  display: flex; /* Flexbox layout for info */
+  justify-content: flex-start; /* Aligns info items to the start */
+  gap: 20px; /* Space between info items */
+  color: #888; /* Light gray text */
+  font-size: 1rem; /* Font size for info text */
+}
+
+div.post p.info span, .bookmark-item .info span {
+  font-weight: bold; /* Makes info labels bold */
+}
+
+div.post p.info time, .bookmark-item .info time {
+  font-size: 0.9rem; /* Smaller font size for time */
+  color: rgb(58, 5, 25); /* Darker color for time */
+}
+
+div.post p.summary, .bookmark-item .summary {
+  color: #212121; /* Dark gray color for summaries */
+  line-height: 1.8rem; /* Spacing between lines in summary */
+  text-align: left; /* Left-aligns text */
+  flex: 2; /* Allows summary to take up remaining space */
+}
+
+div.post img, .bookmark-item img {
+  max-height: 250px; /* Max height for images */
+  width: 200px; /* Fixed width for images */
+  object-fit: cover; /* Ensures image covers area without distortion */
+  border-radius: 12px; /* Rounded corners for images */
+}
+
+/* Adjusting the image and text for the bookmark items */
+.bookmark-item {
+  flex-direction: row; /* Keeps image on the left and text on the right */
+  padding: 20px; /* Padding inside bookmark item */
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: none; /* No box-shadow for bookmark items */
+  width: 100%; /* Full width */
+  margin-bottom: 30px; /* Margin below bookmark item */
+}
+
+.bookmark-item .info, .post .info {
+  margin: 0; /* Removes margin from info sections */
+}
+
+.bookmark-item h2, .post h2 {
+  flex-grow: 1; /* Ensures titles align properly */
+}
+
+.bookmark-item .summary, .post .summary {
+  flex-grow: 2; /* Ensures summary text takes equal space */
+}
+
+/* Create Post Page */
+form.create-post {
+  display: flex; /* Flexbox layout for create post form */
+  flex-direction: column; /* Stacks elements vertically */
+  gap: 15px; /* Space between form elements */
+  padding: 20px; /* Padding inside form */
+  background-color: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 700px; /* Max width for form */
+  margin: 0 auto; /* Centers the form */
+}
+
+form.create-post input[type="text"],
+form.create-post input[type="file"],
+form.create-post textarea {
+  padding: 12px; /* Padding inside input fields */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size for input text */
+  width: 100%; /* Full width */
+  margin: 10px 0; /* Margin above and below input fields */
+}
+
+form.create-post textarea {
+  min-height: 150px; /* Minimum height for text area */
+  resize: vertical; /* Allows vertical resizing */
+}
+
+form.create-post button {
+  width: 100%; /* Full width button */
+  padding: 12px; /* Padding inside button */
+  background-color: rgb(165, 56, 96); /* Deep pink color */
+  color: white; /* White text */
+  border: none; /* Removes border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+form.create-post button:hover {
+  background-color: rgb(103, 13, 47); /* Darker pink on hover */
+}
+
+/* Post Page */
+div.post-page div.image {
+  max-height: 300px; /* Max height for post images */
+  display: flex; /* Flexbox layout for image */
+  overflow: hidden; /* Hides overflowing image */
+}
+
+div.post-page div.image img {
+  object-fit: cover; /* Ensures image covers area without distortion */
+  object-position: center center; /* Centers the image */
+  width: 100%; /* Full width */
+}
+
+div.post-page h1 {
+  text-align: center; /* Centers the title */
+  margin: 10px 0 5px; /* Margin above and below title */
+  color: rgb(165, 56, 96); /* Title color */
+}
+
+div.post-page time {
+  text-align: center; /* Centers the time */
+  display: block; /* Makes time a block element */
+  font-size: 1rem; /* Font size for time */
+  color: #888; /* Light gray color for time */
+  margin: 10px 0; /* Margin above and below time */
+}
+
+div.post-page div.author {
+  text-align: center; /* Centers the author */
+  margin-bottom: 20px; /* Margin below author section */
+  font-size: 0.7rem; /* Smaller font size for author */
+  font-weight: bold; /* Makes author text bold */
+}
+
+div.content p {
+  line-height: 1.7rem; /* Line height for readability */
+  margin: 30px 0; /* Margin above and below paragraph */
+}
+
+div.content li {
+  margin-bottom: 10px; /* Margin below list items */
+}
+
+div.edit-row {
+  text-align: center; /* Centers the edit row */
+  margin-bottom: 20px; /* Margin below edit row */
+}
+
+div.post-page a.edit-btn {
+  background-color: #333; /* Dark background for edit button */
+  display: inline-flex; /* Makes button an inline-flex container */
+  align-items: center; /* Centers items inside button */
+  gap: 5px; /* Adds space between icon and text */
+  color: #fff; /* White text */
+  padding: 15px 30px; /* Padding inside button */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Removes underline from link */
+}
+
+a svg {
+  height: 20px; /* Sets the height of the SVG icon */
+}
+
+/* Splash Screen */
+.splash-screen {
+  position: fixed; /* Fixed position on screen */
+  top: 0; /* Aligns to the top of the page */
+  left: 0; /* Aligns to the left of the page */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: #FBF5E5; /* Soft pastel background */
+  color: #212121; /* Dark gray text */
+  display: flex; /* Flexbox layout for splash screen */
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  z-index: 9999; /* Makes sure splash screen appears on top */
+  font-family: 'Poiret One', sans-serif; /* Font for splash screen */
+}
+
+.splash-screen h1 {
+  font-size: 3rem; /* Large font for splash screen title */
+  margin-bottom: 15px; /* Margin below title */
+  color: rgb(165, 56, 96); /* Splash screen title color */
+  font-weight: 600; /* Bold title */
+}
+
+.splash-screen p {
+  font-size: 1.2rem; /* Font size for splash screen text */
+  color: #888; /* Light gray color for text */
+}
