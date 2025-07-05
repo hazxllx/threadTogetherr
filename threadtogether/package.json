@@ -1,8 +1,19 @@
 {
+  "name": "threadTogether",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "npm run build && node api/index.js",
+    "build": "cd client && npm install && npm run build"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.2",
@@ -11,9 +22,5 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
-  },
-  "scripts": {
-  "start": "npm run build && node api/index.js",
-  "build": "cd client && npm install && npm run build"
   }
 }
